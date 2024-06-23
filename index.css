@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+img{
+    width: 30%;
+    height: 30%;
+    background-position: 50% 50%;
+    background-size: cover;
+    list-style-image: none;
+}
+
+#daynight{
+    height: auto;
+    width: auto;
+    display: flex;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#daynight{
+    font-size: 30px;
+}

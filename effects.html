@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 80%;
+            height: 100vh;
+            background-color: skyblue;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #content-div {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        #btns {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: #272727;
+            color: white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="content-div">
+        <h1 id="heading">Lorem ipsum dolor sit amet.</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus quam, aperiam beatae mollitia odio. Ipsam, veritatis corporis architecto sint et atque aliquid iure ea accusamus tenetur temporibus harum error eligendi. Tempora est impedit optio, expedita unde, repellendus vero totam esse nostrum dignissimos, vitae distinctio! Delectus, harum quas? Numquam iste id earum quisquam similique perferendis officia! Voluptas rerum eligendi facere eum architecto! Veritatis, corporis tenetur at eveniet dolorem ipsum exercitationem unde veniam numquam doloribus, optio molestias maxime similique adipisci nihil.</p>
+    </div>
+    <div id="btns">
+        <button id="btn1">Fade Out</button>
+        <button id="btn2">Fade In</button>
+        <button id="btn3">Toggle Fade</button>
+        <button id="btn4">Fade Ratio</button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('#heading, #para').fadeOut(1000);
+            });
+
+            $('#btn2').click(function() {
+                $('#heading, #para').fadeIn(1000);
+            });
+
+            $('#btn3').click(function() {
+                $('#heading, #para').fadeToggle(1000);
+            });
+
+            $('#btn4').click(function() {
+                $('#heading, #para').fadeTo(1000, 0.5);
+            });
+        });
+    </script>
+</body>
+</html>

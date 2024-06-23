@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="jquerry.js"></script>
+</head>
+<body>
+
+<div id="daynight">
+    <i class="fa-regular fa-sun" id="day"></i>
+    <i class="fa-regular fa-moon" id="night" style="color: #265bb5;"></i>
+</div>
+<script>
+         var i=0;
+        while(i<5){
+        document.write("<h2>loop</h2> <p>dfdfd dfdfdf dfdfd dfdfdf dfdfdfd</p>");
+        var img=document.createElement('img');
+        img.src='footerlogo.png';
+        document.body.appendChild(img);
+        ++i;
+    }
+
+    // for(i=0;i<5;++i){
+    //     document.write("<h2>loop</h2> <p>dfdfd dfdfdf dfdfd dfdfdf dfdfdfd</p>");
+    //     var img=document.createElement('img');
+    //     img.src='footerlogo.png';
+    //     document.body.appendChild(img);
+    // }
+
+    $(document).ready(function(){
+        $('#day').click(function(){
+            $('body').css('background-color','white')
+            $('body').css('color','black')
+            $('body').css('transition','3s')
+        });
+
+        $('#night').click(function(){
+            $('body').css('background-color','black')
+            $('body').css('color','white')
+            $('body').css('transition','3s')
+        });
+
+    });
+
+        
+    
+
+</script>
+
+</body>
+</html>

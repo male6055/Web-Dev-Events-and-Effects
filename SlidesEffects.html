@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-div {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        #menu {
+            width: 300px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        #list {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+        #list div {
+            border-bottom: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div id="menu"><i class="fa-solid fa-bars"></i></div>
+        <div id="list">
+            <div>Home</div>
+            <div>Services</div>
+            <div>Packages</div>
+            <div>Projects</div>
+            <div>Products</div>
+            <div>About</div>
+            <div>Contact Us</div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#menu').click(function(){
+                $('#list').slideToggle(500, function(){
+                    var isListVisible = $('#list').is(':visible');
+                    $('#main-div').css('background-color', isListVisible ? 'white' : '');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
